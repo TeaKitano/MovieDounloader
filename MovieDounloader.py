@@ -1,5 +1,4 @@
 import PySimpleGUI as sg
-
 from yt_dlp import YoutubeDL
 
 #ファイルが存在するかチェック　開けてみてエラーならFalse、開いたら閉じてTrue返す
@@ -80,7 +79,7 @@ def dounload(values):
 
 
 
-#実質main
+#gui制御
 def dounload_gui():
 
     file_type=["動画","音源"]#ダウンロードタイプの選択肢
@@ -90,7 +89,7 @@ def dounload_gui():
     [sg.Button("ダウンロード",size=(15,1)),sg.Button("終了",size=(15,1))]] #gui設計
 
 
-    window=sg.Window("youtubeダウンローダ―",layout)
+    window=sg.Window("MovieDounloader",layout)
     while True:
         event,values=window.read()#eventと入力を取得　valuesは[ダウンロード元URL,動画か音源か,保存ファイル名]のリスト
         if event==sg.WIN_CLOSED or event=="終了":
@@ -99,6 +98,6 @@ def dounload_gui():
             dounload(values)#ダウンロード制御関数
             
 
-
-
-dounload_gui()
+#main
+if __name__ == '__main__':
+     dounload_gui()
