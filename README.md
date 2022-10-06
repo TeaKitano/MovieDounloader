@@ -1,6 +1,7 @@
 # MovieDounloader
  
 youtubeやニコニコ動画などの動画と音楽をGUIからダウンロードできるようにしたアプリケーションです。
+MovieDounloader.zipをダウンロードして頂けば、環境構築等せずにすぐに運用できます。
  
  
 # Features
